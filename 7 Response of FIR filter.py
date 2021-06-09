@@ -6,8 +6,6 @@ def dft(x,N):
     n = np.arange(N)
     k = n.reshape((N, 1))
     temp = np.exp((-2j * np.pi * n * k) / N)
-    # print(twiddler_mat)
-
     dft_x = np.dot(temp, x)
     return dft_x
 
