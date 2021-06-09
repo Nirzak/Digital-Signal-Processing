@@ -22,4 +22,4 @@ for n in range(N):
         if n >= k:
             y[n] = y[n] + x[n - k] * h[k]
 
-print('Auto-Correlation of x(n) =\n', y.astype('int'))
+print('Auto-Correlation of signal x =', y.astype('int'))

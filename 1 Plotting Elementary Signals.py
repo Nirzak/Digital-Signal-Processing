@@ -15,16 +15,16 @@ for unit in n:
 
 #plotting graph
 plt.stem(n, step)
-plt.xlabel('n')
-plt.ylabel('u[n]')
+plt.xlabel('Sample')
+plt.ylabel('Amplitude')
 plt.title('Unit step Signal')
+plt.grid("true")
 plt.show()
 
 
 # Plotting Impulse Signal
 a = 4
 n = np.arange(-10, 10, 1)
-#d = unit_impulse(a, n)
 impulse = []
 for unit in n:
     if unit == a:
@@ -34,9 +34,10 @@ for unit in n:
 
 #Plotting graph
 plt.stem(n, impulse)
-plt.xlabel('n')
-plt.ylabel('d[n]')
+plt.xlabel('Sample')
+plt.ylabel('Amplitude')
 plt.title('Impulse Signal')
+plt.grid("true")
 plt.show()
 
 
@@ -49,9 +50,10 @@ for unit in n:
     else:
         ramp.append(unit)
 plt.stem(n, ramp)
-plt.xlabel('n')
-plt.ylabel('r[n]')
+plt.xlabel('Sample')
+plt.ylabel('Amplitude')
 plt.title('Ramp Signal')
+plt.grid("true")
 plt.show()
 
 
@@ -62,7 +64,8 @@ expo = []
 for unit in n:
     expo.append(np.exp(a * unit))
 plt.stem(n, expo)
-plt.xlabel('n')
-plt.ylabel('x[n]')
+plt.xlabel('Sample')
+plt.ylabel('Amplitude')
 plt.title('Exponential Signal')
+plt.grid("true")
 plt.show()

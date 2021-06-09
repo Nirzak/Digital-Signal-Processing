@@ -1,9 +1,9 @@
 import numpy as np
 
 # impulse response
-h = [1, 2, 3, 3, 2, 1];
+h = [1, 2, 3, 3, 2, 1]
 # input response
-x = [1, 2, 3, 4, 5];
+x = [1, 2, 3, 4, 5]
 N1 = len(x)
 N2 = len(h)
 N = N1 + N2 - 1
@@ -20,4 +20,4 @@ for n in range(N):
         if n >= k:
             y[n] = y[n] + x[n - k] * h[k]
 
-print('Linear convolution of two signals =\n', y.astype('int'))
+print('Linear convolution of two signals =', y.astype('int'))

@@ -1,10 +1,10 @@
 import numpy as np
 
 #x = eval(input('Enter the input sequence x[n]='))
-x = [1, 2, 3, 4, 5];
+x = [1, 2, 3, 4, 5]
 N1 = len(x)
 #h = eval(input('Enter the input sequence h[n]='))
-h = [1, 2, 3, 3, 2, 1];
+h = [1, 2, 3, 3, 2, 1]
 N2 = len(h)
 N = N1 + N2 - 1
 y = np.zeros(N)
@@ -23,4 +23,4 @@ for n in range(N):
         if n >= k:
             y[n] = y[n] + x[n - k] * h[k]
 
-print('Cross-Correlation of Two Signals y =\n', y.astype('int'))
+print('Cross-Correlation of Two Signals =', y.astype('int'))
